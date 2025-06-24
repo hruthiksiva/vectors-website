@@ -1,6 +1,6 @@
-// src/components/PortfolioGrid.jsx
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 import biotikImg from "../assets/images/client/biotik-new.svg";
 import educomfyImg from "../assets/images/client/educomfy-new.svg";
@@ -99,7 +99,7 @@ const portfolioItems = [
     description:
       "Sengadu Organics delivers fresh, organic produce sourced from heritage-rich red soil regions.",
     tags: ["Web Development", "Product Marketing", "UI/UX Design", "Sales", "Organic"],
-    url: "https://sengaduorganics.com"
+    url: "https://www.sengaduorganics.in/"
   },
   {
     title: "Hawt Gallery",
@@ -108,7 +108,7 @@ const portfolioItems = [
     description:
       "Hawt Gallery is a gamified photo platform that automatically collects images, organizes them based on user engagement and preferences, and efficiently archives or removes redundant photos.",
     tags: ["Startup", "Product Marketing", "Maintenance", "UI/UX Design", "AI", "Marketing"],
-    url: ""
+    url: "https://apps.apple.com/in/app/photo-cleaner-hawt/id6745742465"
   },
   {
     title: "Airshine Tours and Travel",
@@ -149,22 +149,27 @@ const portfolioItems = [
 
 const PortfolioGrid = () => {
   return (
-    <section className="bg-white py-20 px-4 md:px-8">
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {portfolioItems.map((item, idx) => (
-          <div
+          <motion.div
             key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
             className="group border border-gray-200 rounded-2xl shadow hover:shadow-xl transition duration-300 bg-gradient-to-br from-white to-gray-50 overflow-hidden"
           >
-            <div className="h-48 overflow-hidden">
+            <div className="h-48 w-full overflow-hidden">
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
+                decoding="async"
               />
             </div>
-            <div className="p-6">
+            <div className="p-5 sm:p-6">
               {item.badge && item.badge.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-3">
                   {item.badge.map((b, i) => (
@@ -206,7 +211,7 @@ const PortfolioGrid = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

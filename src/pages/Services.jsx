@@ -1,10 +1,12 @@
-// Updated Services Page (Responsive & Professional)
+// src/pages/Services.jsx
 import React from 'react';
 import IndustrySection from '../components/IndustrySection';
 import marketing from "../assets/images/service/Marketing.png";
 import ai from "../assets/images/service/Ai.png";
 import design from "../assets/images/service/Design.png";
 import web from "../assets/images/service/Web.png";
+import business from "../assets/images/service/Business-enablement.png"; // ✅ updated unique image
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -89,7 +91,7 @@ const services = [
     tagline: 'Comprehensive Support for Business Setup & Growth',
     description:
       'Beyond digital services, we offer strategic support to help businesses set up, stay compliant, and scale.',
-    image: ai, // optionally replace with a more relevant image
+    image: business, // ✅ updated with unique business image
     points: [
       'Business Consulting & Planning',
       'Company Registration & Compliance',
@@ -105,28 +107,32 @@ const services = [
   },
 ];
 
-
 const Services = () => {
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col pt-20">
       <main className="flex-grow">
         {/* Header Section */}
         <section className="bg-blue-50 py-20 px-6 text-center">
-        <div className="max-w-5xl mx-auto p-20">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Accelerate Your Growth with Vectors</h1>
-          <p className="text-gray-600 text-lg">
-            Discover a powerful suite of AI, Design, Marketing, and Web Development services—crafted to elevate your brand, drive measurable results, and turn your vision into reality. Whether you're starting up or scaling fast, Vectors builds exactly what your business needs to succeed.
-          </p>
-        </div>
-
+          <div className="max-w-5xl mx-auto p-20">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+              Accelerate Your Growth with Vectors
+            </h1>
+            <p className="text-gray-600 text-lg">
+              Discover a powerful suite of AI, Design, Marketing, and Web Development services—crafted to elevate your brand, drive measurable results, and turn your vision into reality. Whether you're starting up or scaling fast, Vectors builds exactly what your business needs to succeed.
+            </p>
+          </div>
         </section>
 
         {/* Service Sections */}
         {services.map(({ id, title, tagline, description, image, points, note }, index) => (
-          <section
+          <motion.section
             key={id}
             id={id}
             className={`py-16 px-6 ${index % 2 === 0 ? 'bg-white' : 'bg-blue-50'}`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -147,14 +153,26 @@ const Services = () => {
                 <p className="text-gray-600 mt-4 text-sm">{note}</p>
               </div>
               <div>
-                <img src={image} alt={title} className="rounded-xl w-full h-auto" loading="lazy" />
+                <img
+                  src={image}
+                  alt={title}
+                  className="rounded-xl w-full h-auto"
+                  loading="lazy"
+                />
               </div>
             </div>
-          </section>
+          </motion.section>
         ))}
 
         {/* Industry Section */}
-        <IndustrySection />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <IndustrySection />
+        </motion.div>
       </main>
     </div>
   );

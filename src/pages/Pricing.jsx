@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const PricingHeader = () => (
-  <section className="bg-indigo-50 py-34 px-6">
+  <motion.section
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true, amount: 0.2 }}
+    className="bg-indigo-50 py-34 px-6"
+  >
     <div className="container mx-auto">
-      <h1 className="text-2xl md:text-5xl font-bold plus-jakarta-sans-1 text-gray-800 text-center py-5">Our Pricing Plans</h1>
+      <h1 className="text-2xl md:text-5xl font-bold plus-jakarta-sans-1 text-gray-800 text-center py-5">
+        Our Pricing Plans
+      </h1>
       <p className="text-gray-600 max-w-2xl mx-auto text-center plus-jakarta-sans-2">
         Choose the perfect plan for your business needs. All plans include our core features and dedicated support.
       </p>
     </div>
-  </section>
+  </motion.section>
 );
+
 
 const PricingContent = ({ activeFilter, setActiveFilter, filters, renderContent }) => (
   <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -23,17 +33,20 @@ const PricingContent = ({ activeFilter, setActiveFilter, filters, renderContent 
 const FilterBar = ({ activeFilter, setActiveFilter, filters }) => (
   <div className="flex flex-wrap justify-center gap-4 mb-16">
     {filters.map((filter) => (
-      <button
-        key={filter.id}
-        onClick={() => setActiveFilter(filter.id)}
-        className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
-          activeFilter === filter.id
-            ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
-            : 'bg-white text-gray-600 hover:bg-gray-50 shadow-md'
-        }`}
-      >
-        {filter.label}
-      </button>
+      <motion.button
+  whileHover={{ scale: 1.08 }}
+  whileTap={{ scale: 0.95 }}
+  key={filter.id}
+  onClick={() => setActiveFilter(filter.id)}
+  className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+    activeFilter === filter.id
+      ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg'
+      : 'bg-white text-gray-600 hover:bg-gray-50 shadow-md'
+  }`}
+>
+  {filter.label}
+</motion.button>
+
     ))}
   </div>
 );

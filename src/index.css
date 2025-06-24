@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-float-up {
+    animation: floatUp 3s ease-in-out infinite;
+  }
+  .animate-float-down {
+    animation: floatDown 3s ease-in-out infinite;
+  }
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(2rem);
+  }
+  50% {
+    transform: translateY(-2rem); /* Floats up */
+  }
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateY(-2rem);
+  }
+  50% {
+    transform: translateY(2rem); /* Floats down */
+  }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-gray-800 antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif';
+  font-weight: bold;
+}
+
+p {
+  @apply font-sans text-base leading-relaxed text-gray-700;
+}
+
+/* styles.css */
+@keyframes bounceUp {
+  0%, 100% { transform: translateY(20px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(-20px); }
+  50% { transform: translateY(20px); }
+}
+
+.animate-bounce-up {
+  animation: bounceUp 4s infinite;
+}
+
+.animate-bounce-down {
+  animation: bounceDown 4s infinite;
+}
+
+.plus-jakarta-sans-1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.plus-jakarta-sans-2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+}

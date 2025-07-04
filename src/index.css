@@ -30,6 +30,10 @@
   }
 }
 
+html, body, #root {
+  font-family: 'Plus Jakarta Sans', 'Geist', 'Poppins', sans-serif;
+}
+
 html{
     scroll-behavior: smooth;
 }

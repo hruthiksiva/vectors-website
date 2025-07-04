@@ -550,28 +550,43 @@ const Pricing = () => {
     marketing: [
       {
         title: 'Social Media Management',
-        price: '15,000',
+        price: '12k-15k',
         description: 'Complete social media management and content creation'
       },
       {
         title: 'SEO Services',
-        price: '20,000',
+        price: '20k-50k',
         description: 'Search engine optimization and content strategy'
       },
       {
-        title: 'PPC Campaigns',
-        price: '25,000',
+        title: 'PPC Advertising',
+        price: '25k-60k',
         description: 'Google Ads and social media advertising'
       },
       {
-        title: 'Content Marketing',
-        price: '18,000',
-        description: 'Blog writing and content strategy'
+        title: 'Online Reputation Management(ORM)',
+        price: '12k-15k',
+        description: 'Build, protect, and enhance your brand online reputation with strategic monitoring and engagement.'
       },
       {
-        title: 'Email Marketing',
-        price: '12,000',
-        description: 'Email campaign setup and management'
+        title: 'Social Media Optimization(SMO)',
+        price: '15k-40k',
+        description: 'Maximize your social media reach and engagement through targeted content and platform optimization'
+      },
+      {
+        title: 'Youtube Marketing',
+        price: '10k-28k',
+        description:'Boost visibility and grow your audience with impactful video content and smart YouTube strategies.'
+      },
+      {
+        title: 'Instagram Marketing',
+        price: '25k-40k',
+        description: 'Drive brand awareness and conversions through creative Instagram campaigns tailored to your audience.'
+      },
+      {
+        title: 'Facebook Marketing',
+        price: '25k-40k',
+        description: 'Reach and engage your ideal customers with data-driven Facebook advertising and content strategies.'
       }
     ],
     appDev: [
@@ -740,12 +755,15 @@ const Pricing = () => {
   );
 
   const ServiceBox = ({ title, price, description }) => (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6 border border-gray-100">
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-        Starting from ₹{price}
-      </p>
-      <p className="text-gray-600">{description}</p>
+    <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 p-8 border border-gray-200 flex flex-col items-start">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <div className="w-full flex items-center mb-4">
+        <span className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-1xl font-extrabold px-6 py-2 rounded-xl shadow-lg border-4 border-white">
+          ₹{price}
+        </span>
+      </div>
+      <div className="w-full border-t border-gray-200 my-4"></div>
+      <p className="text-gray-700 text-base leading-relaxed">{description}</p>
     </div>
   );
 

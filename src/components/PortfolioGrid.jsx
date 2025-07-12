@@ -99,7 +99,7 @@ const portfolioCategories = {
       description:
         "Airshine Tours and Travel crafts personalized itineraries for unforgettable adventures and immersive cultural experiences.",
       tags: ["30 Years in Industry", "Offline To Online", "3+ Years of Partnership", "Travel Agency", "UI/UX", "Web Development"],
-      url: ""
+      url: "http://aqua-stinkbug-502877.hostingersite.com/"
     },
     {
       title: "Probic Consultancy",

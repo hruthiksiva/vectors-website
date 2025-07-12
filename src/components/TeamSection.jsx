@@ -6,29 +6,36 @@ import Member2 from '/src/assets/images/member-4.jpeg';
 import Member3 from '/src/assets/images/member-2.jpeg';
 import Member4 from '/src/assets/images/member-5.jpg';
 
-const teamMembers = [
+const founders = [
   {
     img: Member1,
     name: 'Hruthik Sivakumar',
+    title: 'Co-Founder & CEO',
     position: 'Data Science Lead',
     linkedin: '#',
   },
   {
     img: Member2,
     name: 'Balaji Sundarapandi',
+    title: 'Co-Founder & COO',
     position: 'Marketing Lead',
     linkedin: '#',
   },
   {
     img: Member3,
     name: 'Kowshik Karmegam',
+    title: 'Co-Founder & CTO',
     position: 'Development Lead',
     linkedin: '#',
   },
+];
+
+const leadership = [
   {
     img: Member4,
     name: 'Naveen Muthusamy',
-    position: 'Design Lead',
+    title: 'Chief Design Officer',
+    position: '',
     linkedin: '#',
   },
 ];
@@ -46,31 +53,61 @@ const TeamSection = () => {
         <p className="text-gray-600 mb-6 sm:mb-8 pb-4 sm:pb-5 text-sm sm:text-xl">
           The team behind this wonderful company
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-          {teamMembers.map((member, idx) => (
-            <div
-              key={idx}
-              className="bg-[#1e293b] bg-opacity-50 rounded-xl shadow-lg overflow-hidden flex flex-col w-full max-w-xs transition-transform duration-200 hover:scale-105 hover:shadow-2xl border border-transparent hover:border-cyan-400"
-            >
-              <div className="w-full h-70 flex items-center justify-center bg-black">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-full object-contain rounded-t-xl"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex flex-row items-center justify-between px-4 py-3">
-                <div className="flex flex-col items-start">
-                  <span className="text-white font-bold text-base leading-tight">{member.name}</span>
-                  <span className="text-gray-400 text-xs leading-tight">{member.position}</span>
+        <div className="mb-10">
+          <h3 className="text-2xl font-semibold text-gray-700 mb-6">Founders</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+            {founders.map((member, idx) => (
+              <div
+                key={idx}
+                className="bg-[#1e293b] bg-opacity-50 rounded-xl shadow-lg overflow-hidden flex flex-col w-full max-w-xs transition-transform duration-200 hover:scale-105 hover:shadow-2xl border border-transparent hover:border-cyan-400"
+              >
+                <div className="w-full h-70 flex items-center justify-center bg-black">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-[260px] object-cover rounded-t-xl"
+                    loading="lazy"
+                  />
                 </div>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="ml-2">
-                  <LinkedInIcon />
-                </a>
+                <div className="flex flex-row items-center justify-between px-4 py-3">
+                  <div className="flex flex-col items-start">
+                    <span className="text-white font-bold text-base leading-tight">{member.name}</span>
+                    <span className="text-cyan-300 text-xs leading-tight">{member.title}</span>
+                    <span className="text-gray-400 text-xs leading-tight">{member.position}</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold text-gray-700 mb-6">Leadership</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+            {leadership.map((member, idx) => (
+              <div
+                key={idx}
+                className="bg-[#1e293b] bg-opacity-50 rounded-xl shadow-lg overflow-hidden flex flex-col w-full max-w-xs transition-transform duration-200 hover:scale-105 hover:shadow-2xl border border-transparent hover:border-cyan-400"
+              >
+                <div className="w-full h-70 flex items-center justify-center bg-black">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-[260px] object-cover rounded-t-xl"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex flex-row items-center justify-between px-4 py-3">
+                  <div className="flex flex-col items-start">
+                    <span className="text-white font-bold text-base leading-tight">{member.name}</span>
+                    <span className="text-cyan-300 text-xs leading-tight">{member.title}</span>
+                    {member.position && (
+                      <span className="text-gray-400 text-xs leading-tight">{member.position}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

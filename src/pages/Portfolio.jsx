@@ -8,7 +8,7 @@ const Portfolio = () => {
     <div className="bg-gray-50 min-h-screen flex flex-col pt-20">
       <main className="flex-grow">
         {/* Header Section */}
-        <section className="bg-teal-100 py-34 px-6">
+        <section className="bg-sky-100 py-34 px-6">
           <div className="container mx-auto">
             <h1 className="text-2xl md:text-5xl font-bold text-gray-800 text-center m-5">Our Portfolio</h1>
             <p className="text-gray-600 max-w-2xl mx-auto text-center mb-8">

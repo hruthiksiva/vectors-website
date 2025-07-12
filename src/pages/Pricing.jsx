@@ -84,7 +84,7 @@ const Pricing = () => {
       ]
     },
     {
-      name: 'Pro',
+      name: 'Professional Full Stack',
       price: '₹1.5 Lakhs',
       features: [
         'Responsive Website Design',
@@ -102,8 +102,8 @@ const Pricing = () => {
       ]
     },
     {
-      name: 'Enterprise',
-      price: '₹5 Lakhs',
+      name: 'SAAS Enterprise Level',
+      price: '₹10 Lakhs',
       features: [
         'Responsive Website Design',
         '5-10 Pages',
@@ -123,8 +123,8 @@ const Pricing = () => {
 
   const appDevPlans = [
     {
-      name: 'Standard',
-      price: '₹50,000',
+      name: 'Standard MVP',
+      price: '₹1 Lakh',
       features: [
         'Single Platform App (iOS/Android)',
         'Basic UI/UX Design',
@@ -141,26 +141,26 @@ const Pricing = () => {
       ]
     },
     {
-      name: 'Pro',
-      price: '₹2 Lakhs',
-      features: [
-        'Single Platform App (iOS/Android)',
-        'Basic UI/UX Design',
-        '5-10 Core Features',
-        'Basic User Authentication',
-        'Simple Database Integration',
-        'Basic Push Notifications',
-        'Standard App Performance',
-        'Basic Analytics Integration',
-        'Standard Support',
-        'App Store Submission',
-        'Custom Animations',
-        'Advanced Security Features'
-      ]
-    },
-    {
-      name: 'Enterprise',
+      name: 'Professional App',
       price: '₹10 Lakhs',
+      features: [
+        'Single Platform App (iOS/Android)',
+        'Basic UI/UX Design',
+        '5-10 Core Features',
+        'Basic User Authentication',
+        'Simple Database Integration',
+        'Basic Push Notifications',
+        'Standard App Performance',
+        'Basic Analytics Integration',
+        'Standard Support',
+        'App Store Submission',
+        'Custom Animations',
+        'Advanced Security Features'
+      ]
+    },
+    {
+      name: 'Enterprise Level App',
+      price: '₹25 Lakhs',
       features: [
         'Single Platform App (iOS/Android)',
         'Basic UI/UX Design',
@@ -198,7 +198,7 @@ const Pricing = () => {
       ]
     },
     {
-      name: 'Pro',
+      name: 'Professional Package',
       price: '₹1.5 Lakhs',
       features: [
         'Social Media Management',
@@ -216,7 +216,7 @@ const Pricing = () => {
       ]
     },
     {
-      name: 'Enterprise',
+      name: 'Enterprise Package',
       price: '₹5 Lakhs',
       features: [
         'Social Media Management',

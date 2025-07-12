@@ -13,17 +13,17 @@ const ServicesSection = () => {
               </h3>
             </div>
             <div>
-              <p className="text-gray-400 text-lg">
+              <h3 className="text-white text-lg">
                 At Vectors, we offer a comprehensive suite of services designed to accelerate your business growth. Our expertise spans across Marketing, Web & App Development, Design, and Artificial Intelligence, with each service customized to your unique needs. We create strategic, high-impact solutions that ensure your business not only adapts but thrives in the ever-evolving digital world.
-              </p>
+              </h3>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-stretch">
           {/* Marketing */}
-          <a href='/services#marketing'>
-          <div className="bg-indigo-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <a href='/services#marketing' className="h-full">
+          <div className="bg-indigo-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer h-full">
             <div className="flex items-center justify-center mb-4">
               <h4 className="text-xl text-gray-800 mr-2">Marketing</h4>
               <svg 
@@ -42,8 +42,8 @@ const ServicesSection = () => {
           
 
           {/* Design */}
-          <a href='/services#design'>
-          <div className="bg-lime-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <a href='/services#design' className="h-full">
+          <div className="bg-lime-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer h-full">
             <div className="flex items-center justify-center mb-4">
               <h4 className="text-xl text-gray-800 mr-2">Design</h4>
               <svg 
@@ -62,8 +62,8 @@ const ServicesSection = () => {
           
 
           {/* Web Development */}
-          <a href='/services#webdevelopment'>
-          <div className="bg-yellow-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <a href='/services#webdevelopment' className="h-full">
+          <div className="bg-yellow-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer h-full">
             <div className="flex items-center justify-center mb-4">
               <h4 className="text-xl text-gray-800 mr-2">Web Development</h4>
               <svg 
@@ -82,8 +82,8 @@ const ServicesSection = () => {
           
 
           {/* AI Assistance */}
-          <a href='/services#AI'>
-          <div className="bg-blue-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <a href='/services#AI' className="h-full">
+          <div className="bg-blue-100 rounded-2xl p-6 shadow-md flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer h-full">
             <div className="flex items-center justify-center mb-4">
               <h4 className="text-xl text-gray-800 mr-2">AI Assistance</h4>
               <svg 

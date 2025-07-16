@@ -191,6 +191,14 @@ const portfolioCategories = {
       tags: ["Web Development", "Product Marketing", "UI/UX Design", "Sales", "Organic"],
       url: "https://www.sengaduorganics.in/"
     },
+    {
+      title: "RAAS Consultancy",
+      image: RaasImg,
+      description:
+        "RAAS Consultancy blends financial clarity with human-first thinking — offering ethical, tailored services for startups, freelancers, and growing businesses across India.",
+      tags: ["Financial Consulting", "Tax Filing", "Compliance", "Startups", "Bookkeeping", "Advisory"],
+      url: "https://www.raasconsultancy.in/"
+    },
   ],
   "Content Writing": [
     {

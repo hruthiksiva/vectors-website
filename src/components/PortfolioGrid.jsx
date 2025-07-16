@@ -10,6 +10,7 @@ import bringerImg from "../assets/images/client/bringer-new.svg";
 import appflowImg from "../assets/images/client/appflow-new.svg";
 import pythonistaplanetImg from "../assets/images/client/pythonistplanet.svg";
 import sengaduImg from "../assets/images/client/sengadu-new.svg";
+import RaasImg from "../assets/images/client/RaasConsult.jpeg";
 import probicImg from "../assets/images/client/probic.svg";
 import img11Img from "../assets/images/client/Img11.svg";
 import img12Img from "../assets/images/client/Img12.svg";
@@ -85,6 +86,14 @@ const portfolioCategories = {
   ],
   "Static Websites": [
     {
+      title: "RAAS Consultancy",
+      image: RaasImg,
+      description:
+        "RAAS Consultancy blends financial clarity with human-first thinking — offering ethical, tailored services for startups, freelancers, and growing businesses across India.",
+      tags: ["Financial Consulting", "Tax Filing", "Compliance", "Startups", "Bookkeeping", "Advisory"],
+      url: "https://www.raasconsultancy.in/"
+    },
+    {
       title: "ExponentFinserv",
       image: exponentImg,
       description:
@@ -109,7 +118,7 @@ const portfolioCategories = {
       tags: ["Marketing", "Web Development", "Maintenance"],
       url: "https://probic.co.in/"
     },
-
+    
   ],
   "Mobile Applications": [
     {

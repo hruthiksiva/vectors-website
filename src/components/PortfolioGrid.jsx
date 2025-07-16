@@ -157,14 +157,14 @@ const portfolioCategories = {
       tags: ["Startup", "App Development", "Product Marketing", "Maintenance", "UI/UX Design", "AI", "Marketing"],
       url: "https://play.google.com/store/apps/details?id=com.smoose.photoowldev&hl=en_IN"
     },
-    {
-      title: "Raas Consultancy",
-      image: img15Img,
-      description:
-        "Raas Consultancy provides expert business consulting services to help companies optimize their operations and achieve strategic goals.",
-      tags: ["Consulting", "Business Strategy", "Web Development", "Marketing"],
-      url: "https://raasconsultancy.com"
-    },
+    // {
+    //   title: "This could be your project",
+    //   image: img15Img,
+    //   description:
+    //     "",
+    //   tags: [],
+    //    url: "https://raasconsultancy.com"
+    // },
     {
       title: "EduComfy",
       badge: ["Long-Term Client"],
